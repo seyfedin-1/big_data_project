@@ -29,8 +29,8 @@ datasets = {
 
 for name, df in datasets.items():
     print(f"\n{name}:")
-    print(df.info())  # Show column types
-    print(df.head())  # Show first 5 rows
+    print(df.info())  
+    print(df.head())
 
 # Count total rows in all datasets
 total_rows = sum(df.shape[0] for df in datasets.values())
