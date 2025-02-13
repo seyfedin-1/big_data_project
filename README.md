@@ -1,6 +1,18 @@
+
+## Prepared By:
+Seyfedin Shukur
+ID Number: addbu/046/14D
+
 # E-Commerce Data Analysis - Brazilian E-Commerce (Olist)
 
 This project analyzes the Brazilian e-commerce (Olist) dataset to extract insights into customer behavior, product trends, and seller performance. It involves data cleaning, transformation, and loading the cleaned data into PostgreSQL for further analysis.
+
+# Tools & Technologies
+PostgreSQL: Relational database for data storage.
+Pandas: Data processing library.
+SQLAlchemy: PostgreSQL connection.
+Power BI: For data visualization.
+VS Code: Code editor.
 
 ## Dataset Overview
 
@@ -30,16 +42,16 @@ orders_cleaned.fillna(method='ffill', inplace=True)
 
 # Step 3: Database Connection
 db_params = {
-    'dbname': 'your_dbname',
-    'user': 'your_username',
-    'password': 'your_password',
+    'dbname': 'big_data_project',
+    'user': 'postgres',
+    'password': 'sigma@boy1',
     'host': 'localhost',
     'port': '5432'
 }
 conn = psycopg2.connect(**db_params)
 
 # Step 4: Create SQLAlchemy engine to load data into PostgreSQL
-engine = create_engine('postgresql+psycopg2://your_username:your_password@localhost:5432/your_dbname')
+engine = create_engine('postgresql+psycopg2://postgres:sigma@boy1@localhost:5432/postgres')
 
 # Load cleaned data into PostgreSQL
 orders_cleaned.to_sql('orders', engine, if_exists='replace', index=False)
