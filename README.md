@@ -3,11 +3,10 @@
 This project analyzes the Brazilian e-commerce (Olist) dataset to extract insights into customer behavior, product trends, and seller performance. It involves data cleaning, transformation, and loading the cleaned data into PostgreSQL for further analysis.
 
 ## Dataset Overview
+
 - **Dataset Name**: Brazilian E-Commerce Data (Olist)
 - **Source**: Kaggle
 - **Size**: 1.5+ million rows across multiple CSV files
-- **Key Files**: 
-    - `orders.csv`, `order_items.csv`, `products.csv`, `customers.csv`, `reviews.csv`, `sellers.csv`, `payment.csv`
 
 ## Steps & Code
 
@@ -15,9 +14,8 @@ This project analyzes the Brazilian e-commerce (Olist) dataset to extract insigh
 2. **Clean Data**: Remove duplicates, handle missing values, and format data types.
 3. **Load to PostgreSQL**: Store cleaned data into a PostgreSQL database for analysis.
 
-### Full Code Example:
-
 ```python
+## Full code example
 import pandas as pd
 import psycopg2
 from sqlalchemy import create_engine
